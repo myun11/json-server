@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        :root {
+            font-family: Arial;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+        }
+
+        .signup-form {
+            background: white;
+            padding: 20px;
+            margin-top: -20px;
+            width: 100%;
+            max-width: 500px;
+            .form-group,
+            .form-group-two-items {
+                margin-bottom: 15px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .form-group-two-items {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .form-group-two-items input{
+                width: 48%;
+            }
+
+
+            input {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                box-sizing: border-box;
+                    &:focus {
+                        border-color: #007bff;
+                        outline: none;
+                        box-shadow: 0 0 5px #7bbbff;
+                    }
+                }
+
+            .agreement {
+                display: flex;
+                align-items: center;
+                justify-content:stretch;
+                margin-bottom: 20px;
+                font-size: 12px;
+                position: relative;
+                padding-top: 15px;
+            }
+            .agreement-check {
+                position: absolute;
+                left: -25px;
+                margin-right: 5px;
+                width: 25%;
+                font-weight: bold;
+            }
+            .agreement-label {
+                width: 75%;
+                position: absolute;
+                right: -10px;
+                justify-content: end;
+            }
+            .agreement-label .register-button {
+                font-size: 10px;
+                font-weight: bold;
+            }
+
+            .form-group-two-items button {
+                width: 48%;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .register-button {
+                background-color: #3382d7;
+                border:none;
+                border-radius: 4px;
+                padding: 4px;
+                color: white;
+            }
+
+            .sign-in-button {
+                background-color: #28a745;
+                color: white;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Sign Up</h1>
+        <form class="signup-form">
+            <div class="form-group-two-items">
+                <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile No." required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="form-group-two-items">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            </div>
+
+            <div class="agreement">
+                <div class="agreement-check">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    I Agree
+                </div>
+                <label class="agreement-label" for="agree">
+                    By clicking <button class="register-button" disabled>Register</button>, you agree to the <a href="#">Terms and Conditions</a>
+                    set out by this site, including our Cookie Use.
+                </label>
+            </div>
+
+            <div class="form-group-two-items">
+                <button type="submit" class="register-button">Register</button>
+                <button type="button" class="sign-in-button">Sign In</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
